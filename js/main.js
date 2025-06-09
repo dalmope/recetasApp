@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     document.getElementById('theme-toggle').addEventListener('click', () => {
         document.body.classList.toggle('dark');
-        localStorage.setItem('tema', 
+        localStorage.setItem('tema',
         document.body.classList.contains('dark') ? 'dark' : 'light');
     });
 
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     const c = document.getElementById('contenedor-recetas');
     items.forEach(rec => {
         const a = document.createElement('a');
-        a.href = `detalle.html?id=${rec.id}`;
+        a.href = `./html/detalle.html?id=${rec.id}`;
         a.className = 'receta';
         a.innerHTML = `<img src="${HOST}/api/files/recetas/${rec.id}/${rec.image}" alt="${rec.titulo}"><h3>${rec.titulo}</h3>`;
         c.appendChild(a);
