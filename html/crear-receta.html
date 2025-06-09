@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva receta</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/crear.css">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">RecetasApp</a>
+    <ul class="nav-links">
+      <li><a href="perfil.html">Perfil</a></li>
+      <li><button id="logout-btn" class="btn">Salir</button></li>
+    </ul>
+  </nav>
+
+  <section class="crear-container">
+    <h2>Crear receta</h2>
+    <form id="form-receta" enctype="multipart/form-data">
+      <label>Título
+        <input type="text" name="titulo" required>
+      </label>
+      <label>Descripción
+        <textarea name="descripcion" rows="4"></textarea>
+      </label>
+      <label>Imagen
+        <input type="file" name="image" accept="image/*">
+      </label>
+
+      <h3>Ingredientes</h3>
+      <div id="ingredientes-container"></div>
+      <button type="button" id="btn-agregar-ingrediente">Añadir ingrediente</button>
+
+      <button type="submit">Guardar receta</button>
+      <p id="mensaje" class="mensaje"></p>
+    </form>
+  </section>
+
+  <script src="../js/crear.js" defer></script>
+</body>
+
+</html>

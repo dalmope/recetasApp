@@ -1,0 +1,63 @@
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #111111;
+  --color-acento: #9b59b6;
+  --color-secundario: #2c3e50;
+}
+body.dark {
+  --color-fondo: #1e1e1e;
+  --color-texto: #eeeeee;
+}
+
+.crear-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #cccccc;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+label {
+  font-weight: 700;
+}
+input,
+textarea {
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid #cccccc;
+}
+#ingredientes-container .ingrediente {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#ingredientes-container input {
+  flex: 1;
+}
+button[type="button"] {
+  align-self: flex-start;
+  background: var(--color-acento);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+button[type="submit"] {
+  background: var(--color-secundario);
+  color: #ffffff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+.mensaje {
+  margin-top: 1rem;
+  color: #16a34a;
+}

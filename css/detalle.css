@@ -1,0 +1,52 @@
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #111111;
+  --color-acento: #9b59b6;
+  --color-secundario: #2c3e50;
+}
+body.dark {
+  --color-fondo: #1e1e1e;
+  --color-texto: #eeeeee;
+}
+
+.detalle-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+#info-receta img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+#info-receta h2 {
+  margin: 1rem 0 0.5rem;
+  color: var(--color-secundario);
+}
+#info-receta p {
+  margin: 0.3rem 0;
+}
+#ingredientes ul {
+  list-style: none;
+  padding-left: 0;
+}
+#ingredientes li {
+  margin-bottom: 0.4rem;
+}
+#acciones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#acciones button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--color-acento);
+  color: #ffffff;
+}
+#acciones-autor button {
+  background: #e74c3c;
+}

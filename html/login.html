@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas · Iniciar sesión</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">RecetasApp</a>
+    <ul class="nav-links">
+      <li><a href="register.html">Registro</a></li>
+    </ul>
+  </nav>
+
+  <main class="login-card">
+    <h1>Iniciar sesión</h1>
+    <form id="login-form">
+      <label>Correo
+        <input type="email" name="correo" required>
+      </label>
+      <label>Contraseña
+        <input type="password" name="contrasena" required>
+      </label>
+      <button type="submit">Entrar</button>
+      <p id="login-error" class="error-msg"></p>
+    </form>
+  </main>
+
+  <script src="../js/auth.js" defer></script>
+</body>
+
+</html>

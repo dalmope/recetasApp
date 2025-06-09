@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi perfil</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">RecetasApp</a>
+    <ul class="nav-links">
+      <li><a href="crear-receta.html">Crear</a></li>
+      <li><button id="logout-btn" class="btn">Salir</button></li>
+    </ul>
+  </nav>
+
+  <section class="perfil-container">
+    <div class="usuario-info">
+      <img src="https://via.placeholder.com/100" alt="avatar">
+      <h2 id="nombre-usuario"></h2>
+    </div>
+
+    <h3>Mis recetas</h3>
+    <div id="mis-recetas" class="recetas-grid"></div>
+  </section>
+
+  <script src="../js/perfil.js" defer></script>
+</body>
+
+</html>

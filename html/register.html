@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas · Registro</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">RecetasApp</a>
+    <ul class="nav-links">
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <main class="login-card">
+    <h1>Crear cuenta</h1>
+    <form id="register-form">
+      <label>Correo
+        <input type="email" name="correo" required>
+      </label>
+      <label>Contraseña
+        <input type="password" name="contrasena" minlength="8" maxlength="12" required>
+      </label>
+      <label>Confirmar contraseña
+        <input type="password" name="confirm-password" required>
+      </label>
+      <button type="submit">Registrarse</button>
+      <p id="register-error" class="error-msg"></p>
+    </form>
+  </main>
+
+  <script src="../js/auth.js" defer></script>
+</body>
+
+</html>
