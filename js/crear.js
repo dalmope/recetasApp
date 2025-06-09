@@ -1,4 +1,4 @@
-const HOST = 'http://localhost:8090';
+const HOST = 'https://recetas-app.pockethost.io';
 const user = JSON.parse(localStorage.getItem('user'));
 
 if (!user) {

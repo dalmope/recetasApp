@@ -1,4 +1,4 @@
-const HOST = 'http://localhost:8090';
+const HOST = 'https://recetas-app.pockethost.io';
 
 const regForm = document.getElementById('register-form');
 

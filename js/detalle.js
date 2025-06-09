@@ -1,4 +1,4 @@
-const HOST = "http://localhost:8090";
+const HOST = "https://recetas-app.pockethost.io";
 const id = new URLSearchParams(location.search).get("id");
 if (!id) location.href = "index.html";
 const user = JSON.parse(localStorage.getItem("user"));

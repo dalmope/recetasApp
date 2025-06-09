@@ -1,10 +1,10 @@
-const HOST = 'http://localhost:8090';
+const HOST = 'https://recetas-app.pockethost.io';
 
 window.addEventListener('DOMContentLoaded', async () => {
     if (localStorage.getItem('tema') === 'dark') {
         document.body.classList.add('dark');
     }
-    
+
     document.getElementById('theme-toggle').addEventListener('click', () => {
         document.body.classList.toggle('dark');
         localStorage.setItem('tema', 
