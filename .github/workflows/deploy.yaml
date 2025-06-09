@@ -15,7 +15,6 @@ jobs:
 
       - name: Replace variables
         run: |
-          mkdir dist
           sed "s/__API_URL__/${{ secrets.API_URL }}/g" index.html > dist/index.html
 
       - name: Deploy to GitHub Pages
