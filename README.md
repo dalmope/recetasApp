@@ -35,3 +35,9 @@ Una aplicación web donde los usuarios pueden registrarse, iniciar sesión y ges
 
    ```bash
    git clone https://github.com/dalmope/recetasApp.git
+
+    cd recetasApp
+    ```
+2. **Abrir Live Server**
+
+   Navega a la carpeta del proyecto y abre el archivo `index.html` con Live Server o cualquier otro servidor estático.
