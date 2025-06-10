@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/crear.css">
 </head>
-
 <body>
   <nav>
     <a href="./../index.html">RecetasApp</a>
@@ -24,23 +22,24 @@
       <label>Título
         <input type="text" name="titulo" required>
       </label>
-      <label>Descripción
+      <label>Procedimiento
         <textarea name="descripcion" rows="4"></textarea>
       </label>
       <label>Imagen
-        <input type="file" name="image" accept="image/*">
+        <input type="file" name="image" accept="image/*" required>
       </label>
 
       <h3>Ingredientes</h3>
       <div id="ingredientes-container"></div>
-      <button type="button" id="btn-agregar-ingrediente">Añadir ingrediente</button>
+      <button type="button" id="btn-agregar-ingrediente">+ Añadir ingrediente</button>
 
       <button type="submit">Guardar receta</button>
       <p id="mensaje" class="mensaje"></p>
     </form>
   </section>
 
+  <script src="../js/config.js"></script>
+  <script src="../js/utils.js"></script>
   <script src="../js/crear.js" defer></script>
 </body>
-
 </html>

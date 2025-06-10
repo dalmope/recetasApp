@@ -3,26 +3,45 @@
   --color-texto: #111111;
   --color-acento: #9b59b6;
   --color-secundario: #2c3e50;
+  --color-tarjeta: #ffffff;
+  --color-borde: #e0e0e0;
+  --color-sombra: rgba(0, 0, 0, 0.1);
 }
+
 body.dark {
-  --color-fondo: #1e1e1e;
-  --color-texto: #eeeeee;
+  --color-fondo: #1a1a1a;
+  --color-texto: #e0e0e0;
+  --color-acento: #b47cc9;
+  --color-secundario: #34495e;
+  --color-tarjeta: #2d2d2d;
+  --color-borde: #404040;
+  --color-sombra: rgba(0, 0, 0, 0.4);
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
 body {
   background: var(--color-fondo);
   color: var(--color-texto);
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
 }
+
 a {
   color: inherit;
   text-decoration: none;
+  transition: opacity 0.2s;
 }
+
+a:hover {
+  opacity: 0.8;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -33,15 +52,30 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 8px var(--color-sombra);
 }
+
+nav a {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  align-items: center;
 }
+
 .nav-links a {
   color: #ffffff;
+  transition: transform 0.2s;
 }
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+}
+
 .btn {
   padding: 0.5rem 1rem;
   border: none;
@@ -49,8 +83,69 @@ nav {
   cursor: pointer;
   background: var(--color-acento);
   color: #ffffff;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
+
 .btn:hover {
   opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px var(--color-sombra);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Estados de carga */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-texto);
+  opacity: 0.7;
+}
+
+/* Mensajes de error */
+.error {
+  color: #e74c3c;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
 }
