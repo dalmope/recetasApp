@@ -198,7 +198,7 @@ function filtrarMisRecetas(soloMias) {
     if (recetasFiltradas.length === 0) {
       document.getElementById("contenedor-recetas").innerHTML =
         `<p style='text-align:center; grid-column: 1/-1'>
-          No tienes recetas aún. <a href="./../html/crear-receta.html" style="color: var(--color-acento)">¡Crea una!</a>
+          No tienes recetas aún. <a href="./html/crear-receta.html" style="color: var(--color-acento)">¡Crea una!</a>
         </p>`;
       ocultarPaginacion();
       return;
@@ -287,7 +287,7 @@ function mostrarRecetas(recetas) {
 
   recetas.forEach((rec, index) => {
     const a = document.createElement("a");
-    a.href = `./../html/detalle.html?id=${rec.id}`;
+    a.href = `./html/detalle.html?id=${rec.id}`;
     a.className = "receta";
     a.style.animationDelay = `${index * 0.05}s`;
 
