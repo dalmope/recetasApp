@@ -67,7 +67,7 @@ regForm?.addEventListener("submit", async (e) => {
 
     // Éxito
     alert("¡Cuenta creada exitosamente! Ahora puedes iniciar sesión.");
-    location.href = "login.html";
+    location.href = "./../html/login.html";
 
   } catch (err) {
     regError.textContent = err.message;
@@ -126,7 +126,7 @@ loginForm?.addEventListener("submit", async (e) => {
     localStorage.setItem("user", JSON.stringify(usuario));
 
     // Redirigir a la página principal
-    location.href = "index.html";
+    location.href = "./../html/index.html";
 
   } catch (err) {
     loginError.textContent = err.message;
@@ -148,14 +148,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (regForm && mainElement) {
     const enlace = document.createElement("div");
     enlace.className = "auth-links";
-    enlace.innerHTML = '¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>';
+    enlace.innerHTML = '¿Ya tienes cuenta? <a href="./../html/login.html">Inicia sesión</a>';
     mainElement.appendChild(enlace);
   }
 
   if (loginForm && mainElement) {
     const enlace = document.createElement("div");
     enlace.className = "auth-links";
-    enlace.innerHTML = '¿No tienes cuenta? <a href="register.html">Regístrate</a>';
+    enlace.innerHTML = '¿No tienes cuenta? <a href="./../html/register.html">Regístrate</a>';
     mainElement.appendChild(enlace);
   }
 });

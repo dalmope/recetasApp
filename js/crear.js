@@ -3,7 +3,7 @@ const user = JSON.parse(localStorage.getItem("user"));
 
 // Verificar autenticación
 if (!user) {
-  location.href = "login.html";
+  location.href = "./../html/login.html";
 }
 
 // Aplicar tema guardado
@@ -15,7 +15,7 @@ if (localStorage.getItem("tema") === "dark") {
 document.getElementById("logout-btn")?.addEventListener("click", () => {
   if (confirm("¿Estás seguro de que quieres cerrar sesión?")) {
     localStorage.clear();
-    location.href = "login.html";
+    location.href = "./../html/login.html";
   }
 });
 
@@ -154,7 +154,7 @@ document.getElementById("form-receta").addEventListener("submit", async (e) => {
 
     // Redirigir después de 1 segundo
     setTimeout(() => {
-      location.href = `detalle.html?id=${receta.id}`;
+      location.href = `./../html/detalle.html?id=${receta.id}`;
     }, 1000);
 
   } catch (err) {

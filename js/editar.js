@@ -4,7 +4,7 @@ const user = JSON.parse(localStorage.getItem("user"));
 
 // Verificar autenticación y parámetros
 if (!user || !id) {
-  location.href = "login.html";
+  location.href = "./../html/login.html";
 }
 
 // Aplicar tema guardado
@@ -23,7 +23,7 @@ let ingredientesOriginales = [];
 document.getElementById("logout-btn")?.addEventListener("click", () => {
   if (confirm("¿Estás seguro de que quieres cerrar sesión?")) {
     localStorage.clear();
-    location.href = "login.html";
+    location.href = "./../html/login.html";
   }
 });
 
@@ -80,7 +80,7 @@ function eliminarIngrediente(boton) {
     // Verificar que el usuario sea el autor
     if (recetaActual.receta_id !== user.id) {
       alert("No tienes permiso para editar esta receta");
-      location.href = "perfil.html";
+      location.href = "./../html/perfil.html";
       return;
     }
     
@@ -128,7 +128,7 @@ function eliminarIngrediente(boton) {
     mensajeDiv.textContent = err.message;
     mensajeDiv.className = "mensaje error";
     setTimeout(() => {
-      location.href = "perfil.html";
+      location.href = "./../html/perfil.html";
     }, 2000);
   }
 })();
@@ -250,7 +250,7 @@ form.addEventListener("submit", async (e) => {
     
     // Redirigir
     setTimeout(() => {
-      location.href = `detalle.html?id=${id}`;
+      location.href = `./../html/detalle.html?id=${id}`;
     }, 1000);
     
   } catch (err) {
@@ -280,7 +280,7 @@ cancelarBtn.style.cssText = `
 `;
 cancelarBtn.addEventListener("click", () => {
   if (confirm("¿Estás seguro de que quieres cancelar? Los cambios no guardados se perderán.")) {
-    location.href = `detalle.html?id=${id}`;
+    location.href = `./../html/detalle.html?id=${id}`;
   }
 });
 form.appendChild(cancelarBtn);

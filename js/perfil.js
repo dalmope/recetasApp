@@ -3,7 +3,7 @@ const user = JSON.parse(localStorage.getItem("user"));
 
 // Verificar autenticación
 if (!user) {
-  location.href = "login.html";
+  location.href = "./../html/login.html";
 }
 
 // Aplicar tema guardado
@@ -18,7 +18,7 @@ document.getElementById("nombre-usuario").textContent = user.correo;
 document.getElementById("logout-btn").addEventListener("click", () => {
   if (confirm("¿Estás seguro de que quieres cerrar sesión?")) {
     localStorage.clear();
-    location.href = "login.html";
+    location.href = "./../html/login.html";
   }
 });
 
@@ -49,7 +49,7 @@ document.getElementById("logout-btn").addEventListener("click", () => {
       container.innerHTML = `
         <div class="no-recetas">
           <p>Aún no has creado ninguna receta.</p>
-          <p><a href="crear-receta.html">¡Crea tu primera receta!</a></p>
+          <p><a href="./../html/crear-receta.html">¡Crea tu primera receta!</a></p>
         </div>
       `;
 
@@ -61,7 +61,7 @@ document.getElementById("logout-btn").addEventListener("click", () => {
     // Mostrar recetas
     items.forEach(rec => {
       const recetaElement = document.createElement("a");
-      recetaElement.href = `detalle.html?id=${rec.id}`;
+      recetaElement.href = `./../html/detalle.html?id=${rec.id}`;
       recetaElement.className = "receta";
 
       const imgSrc = rec.image

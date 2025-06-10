@@ -1,20 +1,20 @@
-const HOST = "https://recetas-app.pockethost.io";
-const id = new URLSearchParams(location.search).get("id");
-if (!id) location.href = "index.html";
+const HOST = 'https://recetas-app.pockethost.io';
+const id = new URLSearchParams(location.search).get('id');
+if (!id) location.href = './../index.html';
 
-const user = JSON.parse(localStorage.getItem("user"));
+const user = JSON.parse(localStorage.getItem('user'));
 
 // Verificar si hay usuario logueado y actualizar navegación
 if (!user) {
-  const navLinks = document.querySelector(".nav-links");
+  const navLinks = document.querySelector('.nav-links');
   navLinks.innerHTML = `
-    <li><a href="login.html">Iniciar sesión</a></li>
-    <li><a href="register.html">Registro</a></li>
+    <li><a href="./../html/login.html">Iniciar sesión</a></li>
+    <li><a href="./../html/register.html">Registro</a></li>
   `;
 } else {
-  document.getElementById("logout-btn")?.addEventListener("click", () => {
+  document.getElementById('logout-btn')?.addEventListener('click', () => {
     localStorage.clear();
-    location.href = "login.html";
+    location.href = "./../html/login.html";
   });
 }
 
@@ -24,7 +24,7 @@ if (!user) {
     const r = await fetch(`${HOST}/api/collections/recetas/records/${id}`);
     if (!r.ok) {
       alert("Receta no encontrada");
-      location.href = "index.html";
+      location.href = "./../index.html";
       return;
     }
     
@@ -69,7 +69,7 @@ if (!user) {
       
       // Evento para editar
       document.getElementById("btn-editar").addEventListener("click", () => {
-        location.href = `editar-receta.html?id=${receta.id}`;
+        location.href = `./../html/editar-receta.html?id=${receta.id}`;
       });
       
       // Evento para eliminar
@@ -90,7 +90,7 @@ if (!user) {
           });
           
           alert("Receta eliminada exitosamente");
-          location.href = "perfil.html";
+          location.href = "./../html/perfil.html";
         } catch (err) {
           alert("Error al eliminar la receta: " + err.message);
         }
@@ -124,6 +124,6 @@ if (!user) {
   } catch (err) {
     console.error("Error:", err);
     alert("Error al cargar la receta");
-    location.href = "index.html";
+    location.href = "./../html/index.html";
   }
 })();
