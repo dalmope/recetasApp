@@ -34,8 +34,7 @@ Una aplicación web donde los usuarios pueden registrarse, iniciar sesión y ges
 1. **Clona el repositorio**
 
    ```bash
-   git clone https://github.com/dalmope/recetasApp.git
-
+    git clone https://github.com/dalmope/recetasApp.git
     cd recetasApp
     ```
 2. **Abrir Live Server**
