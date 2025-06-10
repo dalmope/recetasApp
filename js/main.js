@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   });
 
   // Verificar si el usuario está logueado
-  const navLinks = document.querySelector(".nav-links");
+  const navLinks = document.querySelector('.nav-links');
   if (!user) {
     navLinks.innerHTML = `
       <li><a href="./html/login.html">Iniciar sesión</a></li>
@@ -29,9 +29,9 @@ window.addEventListener('DOMContentLoaded', async () => {
       <li><button id="theme-toggle" class="btn">Tema</button></li>
     `;
     // Re-agregar el evento del tema
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      localStorage.setItem("tema", document.body.classList.contains("dark") ? "dark" : "light");
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('tema', document.body.classList.contains("dark") ? 'dark' : "light");
     });
   }
 
@@ -42,8 +42,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   await cargarRecetas();
 
   // Implementar búsqueda con debounce
-  const searchInput = document.querySelector(".buscador input");
-  const searchButton = document.querySelector(".buscador button");
+  const searchInput = document.querySelector('.buscador input');
+  const searchButton = document.querySelector('.buscador button');
 
   // Función de búsqueda con debounce
   const buscarConDebounce = debounce(async (termino) => {
@@ -56,17 +56,17 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
   }, 300);
 
-  searchButton.addEventListener("click", async () => {
+  searchButton.addEventListener('click', async () => {
     const termino = searchInput.value.trim();
     buscarConDebounce(termino);
   });
 
-  searchInput.addEventListener("input", (e) => {
+  searchInput.addEventListener('input', (e) => {
     const termino = e.target.value.trim();
     buscarConDebounce(termino);
   });
 
-  searchInput.addEventListener("keypress", async (e) => {
+  searchInput.addEventListener('keypress', async (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
       const termino = searchInput.value.trim();
