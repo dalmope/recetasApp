@@ -1,4 +1,4 @@
-const HOST = "https://recetas-app.pockethost.io";
+const HOST = 'https://recetas-app.pockethost.io';
 const user = JSON.parse(localStorage.getItem("user"));
 
 // Variables globales
@@ -8,16 +8,16 @@ let ordenActual = '-created';
 let paginaActual = 1;
 const recetasPorPagina = 12;
 
-window.addEventListener("DOMContentLoaded", async () => {
+window.addEventListener('DOMContentLoaded', async () => {
   // Aplicar tema guardado
-  if (localStorage.getItem("tema") === "dark") {
-    document.body.classList.add("dark");
+  if (localStorage.getItem('tema') === 'dark') {
+    document.body.classList.add('dark');
   }
 
   // Toggle de tema
-  document.getElementById("theme-toggle").addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    localStorage.setItem("tema", document.body.classList.contains("dark") ? "dark" : "light");
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('tema', document.body.classList.contains('dark') ? "dark" : "light");
   });
 
   // Verificar si el usuario está logueado
