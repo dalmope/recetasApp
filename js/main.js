@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   const navLinks = document.querySelector(".nav-links");
   if (!user) {
     navLinks.innerHTML = `
-      <li><a href="./../html/login.html">Iniciar sesión</a></li>
-      <li><a href="./../html/register.html">Registro</a></li>
+      <li><a href="/../html/login.html">Iniciar sesión</a></li>
+      <li><a href="/../html/register.html">Registro</a></li>
       <li><button id="theme-toggle" class="btn">Tema</button></li>
     `;
     // Re-agregar el evento del tema
