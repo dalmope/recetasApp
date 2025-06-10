@@ -126,7 +126,7 @@ loginForm?.addEventListener("submit", async (e) => {
     localStorage.setItem("user", JSON.stringify(usuario));
 
     // Redirigir a la página principal
-    location.href = "./../html/index.html";
+    location.href = "./../index.html";
 
   } catch (err) {
     loginError.textContent = err.message;
